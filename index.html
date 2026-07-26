@@ -221,5 +221,32 @@
         <p>&copy; 2026 Roadmap Cafe. All rights reserved.</p>
     </footer>
 
+    <!-- Automatic Deep Link Handler for Google OAuth -->
+    <script>
+      (function() {
+        const hash = window.location.hash;
+        const search = window.location.search;
+        const params = hash || search;
+
+        if (params && (params.includes('access_token=') || params.includes('code='))) {
+          const appUrl = 'com.roadmap.app://google-auth' + params;
+
+          // Create a subtle banner at the top of the page if user stays here
+          window.addEventListener('DOMContentLoaded', () => {
+            const banner = document.createElement('div');
+            banner.style.cssText = 'background: rgba(255, 178, 89, 0.12); border: 1px solid rgba(255, 178, 89, 0.4); border-radius: 12px; padding: 16px; margin: 0 auto 20px auto; max-width: 820px; text-align: center; font-weight: 500;';
+            banner.innerHTML = `
+              <p style="margin: 0 0 10px 0; color: #eef1ff;">🎉 Sign in successful! Redirecting to Roadmap Cafe app...</p>
+              <a href="${appUrl}" style="display: inline-block; padding: 8px 20px; background: #ffb259; color: #07090f; text-decoration: none; font-weight: bold; border-radius: 8px;">Open Roadmap Cafe App</a>
+            `;
+            const container = document.querySelector('.container');
+            if (container) container.prepend(banner);
+          });
+
+          // Trigger automatic redirect to app
+          window.location.href = appUrl;
+        }
+      })();
+    </script>
 </body>
 </html>
