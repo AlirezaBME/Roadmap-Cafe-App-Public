@@ -16,7 +16,7 @@ A cozy, offline-first personal study planner, habit tracker, and immigration mil
 
 ## 📥 Downloads & Releases
 
-- 🟢 **Web Application:** [Access Online](https://wfzvbhszjxaxanreqrda.supabase.co)
+- 🟢 **Web Application:** *Access Online*
 - 📱 **Android APK:** *Available in Releases*
 - 💻 **Windows Desktop:** *Available in Releases*
 
