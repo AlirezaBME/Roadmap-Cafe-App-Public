@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap Cafe — Personal Study & Immigration Roadmap Planner</title>
+    <meta name="description" content="A cozy, offline-first personal study planner, habit tracker, and immigration milestone manager with ambient soundscapes and cloud sync.">
+    
+    <!-- ⚠️ Replace YOUR_GOOGLE_SITE_VERIFICATION_CODE with the code provided by Google Search Console -->
+    <meta name="google-site-verification" content="t6xNTtj3bgBMQmjE0xdjNdUJxIcyOj9nXZvprOPjaQg" />
+
+    <style>
+        :root {
+            --bg-color: #07090f;
+            --card-bg: #121624;
+            --card-border: rgba(255, 255, 255, 0.08);
+            --accent-color: #ffb259;
+            --accent-hover: #ffa033;
+            --text-main: #eef1ff;
+            --text-muted: #9aa4cc;
+            --link-color: #70a1ff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: radial-gradient(80% 50% at 50% 10%, rgba(255, 178, 89, 0.08), transparent 80%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .logo-icon {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 12px;
+            color: var(--accent-color);
+        }
+
+        /* ⚠️ App name must match Google OAuth Consent Screen name exactly */
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin: 0 0 10px 0;
+            letter-spacing: -0.02em;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 28px;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: var(--accent-color);
+            margin-top: 0;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        li {
+            margin-bottom: 12px;
+            color: var(--text-muted);
+            font-size: 1.02rem;
+        }
+
+        li strong {
+            color: var(--text-main);
+        }
+
+        .highlight-box {
+            background: rgba(255, 178, 89, 0.05);
+            border-left: 4px solid var(--accent-color);
+            padding: 16px 20px;
+            border-radius: 4px 12px 12px 4px;
+            margin-top: 15px;
+        }
+
+        .highlight-box p {
+            color: var(--text-main);
+            font-size: 0.98rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid var(--card-border);
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 14px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <svg class="logo-icon" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34 20c-2-3 2-5 0-8" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+                <path d="M43 18c-2-3 2-5 0-8" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+                <path d="M52 20c-2-3 2-5 0-8" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+                <path d="M24 30h38v18a14 14 0 0 1-14 14h-10a14 14 0 0 1-14-14V30Z" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+                <path d="M62 34h5a7 7 0 0 1 0 14h-5" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                <path d="M20 68h46" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" opacity=".6"/>
+                <path d="M31 55c5-3 4-8 9-10s5-6 10-8" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 5"/>
+            </svg>
+            <h1>Roadmap Cafe</h1>
+            <p class="tagline">A quiet, offline-first personal study planner, habit tracker, and immigration roadmap manager.</p>
+        </header>
+
+        <!-- App Purpose Section -->
+        <div class="card">
+            <h2>🎯 Purpose of the Application</h2>
+            <p>
+                <strong>Roadmap Cafe</strong> is an all-in-one productivity platform designed for students, researchers, and applicants planning their academic journey or immigration roadmap. It provides a serene, focus-oriented environment featuring customizable study boards, milestone tracking, and ambient lo-fi soundscapes.
+            </p>
+        </div>
+
+        <!-- Key Features Section -->
+        <div class="card">
+            <h2>✨ Key Features</h2>
+            <ul>
+                <li><strong>Roadmap & Milestone Tracking:</strong> Interactive Kanban boards, milestone management, and progress analytics tailored for application deadlines.</li>
+                <li><strong>Cozy Lofi Soundscapes:</strong> Built-in ambient audio player featuring soundscapes (rain, thunder, fireplace) and lo-fi stream playback.</li>
+                <li><strong>Offline-First & Private:</strong> All your daily tasks, notes, and local timeline records remain safely stored on your device.</li>
+                <li><strong>Cross-Device Cloud Sync:</strong> Optional cloud synchronization to keep your roadmaps and task status synced seamlessly across all your devices.</li>
+            </ul>
+        </div>
+
+        <!-- Google OAuth Purpose Section -->
+        <div class="card">
+            <h2>🔒 Use of Google Sign-In & Authentication</h2>
+            <p>
+                Roadmap Cafe offers optional <strong>Google Sign-In</strong> solely to authenticate users and enable secure cloud synchronization of their personal roadmaps, task lists, and settings across devices.
+            </p>
+            <div class="highlight-box">
+                <p>
+                    <strong>Data Privacy Commitment:</strong> We respect your privacy. Roadmap Cafe only accesses basic user profile information (email address and account ID) provided by Google OAuth for identity verification. We do not access, share, or sell any user data to third parties.
+                </p>
+            </div>
+        </div>
+
+        <!-- Support Section -->
+        <div class="card">
+            <h2>📧 Support & Inquiries</h2>
+            <p>
+                Have questions or feedback? Contact us directly at <a href="mailto:arielologt@gmail.com" style="color: var(--link-color);">arielologt@gmail.com</a>.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./terms.html">Terms of Service</a>
+            <a href="mailto:arielologt@gmail.com">Support</a>
+        </div>
+        <p>&copy; 2026 Roadmap Cafe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
